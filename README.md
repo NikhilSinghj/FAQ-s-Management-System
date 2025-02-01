@@ -42,12 +42,14 @@ python manage.py runserver
 
 # Get FAQ -
 
-    -- URL : default - http://localhost:8000/api/faqs/
-             hindi -   http://localhost:8000/api/faqs/?lang=hi
-             bengali - http://localhost:8000/api/faqs/?lang=bn
+English
+
+    -- URL : http://localhost:8000/api/faqs/
+                          or  
+             http://localhost:8000/api/faqs/?lang=en
+
     -- Respone :
 
-    English
              [
                 {
                     "id": 1,
@@ -56,7 +58,11 @@ python manage.py runserver
                 }
              ]
     
-    Hindi
+Hindi
+
+    -- URL : http://localhost:8000/api/faqs/?lang=hi
+             
+    -- Respone :
 
              [
                 {
@@ -67,6 +73,10 @@ python manage.py runserver
              ]
     
 Begali
+
+    -- URL : http://localhost:8000/api/faqs/?lang=bn
+             
+    -- Respone :
 
              [
                 {
