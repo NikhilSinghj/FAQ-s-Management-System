@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'google_translate',
     'ckeditor',
     'django_redis',
     'faq',
