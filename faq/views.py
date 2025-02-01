@@ -37,15 +37,12 @@ class FAQListView(APIView):
                 "answer": translated_answer
             })
 
-        cache.set(cache_key, data, timeout=3600)
+        cache.set(cache_key, data, timeout=3600) 
         return Response(data, status=status.HTTP_200_OK)
 
 
 class FAQCreateView(APIView):
     def post(self, request):
-        request.data["question"] = translator.translate(request.data.get("question", ""), dest="en").text
-        request.data["answer"] = translator.translate(request.data.get("answer", ""), dest="en").text
-
         serializer = FAQSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -53,4 +50,3 @@ class FAQCreateView(APIView):
             return Response({"message": "FAQ created successfully", "data": serializer.data}, status=status.HTTP_201_CREATED)
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
