@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from faq.views import FAQListView
+from faq.views import FAQListView, FAQCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/faqs/', FAQListView.as_view(), name='faq-list'),
+    path('api/faqs/add/', FAQCreateView.as_view(), name='add_faq'),
 ]
