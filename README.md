@@ -34,12 +34,11 @@ python manage.py runserver
 
     -- URL : http://localhost:8000/api/faqs/add/
     -- Request POST :
-                 ```sh
+
                  {
                     "question": "This is a test question",
                     "answer": "This is a test answer"
                  }
-                 ```
 
 # Get FAQ -
 
@@ -47,6 +46,8 @@ python manage.py runserver
              hindi -   http://localhost:8000/api/faqs/?lang=hi
              bengali - http://localhost:8000/api/faqs/?lang=bn
     -- Respone :
+
+    English
              [
                 {
                     "id": 1,
@@ -54,6 +55,8 @@ python manage.py runserver
                     "answer": "This is a test answer"
                 }
              ]
+    
+    Hindi
 
              [
                 {
@@ -62,6 +65,8 @@ python manage.py runserver
                     "answer": "यह एक परीक्षण उत्तर है"
                 }
              ]
+    
+Begali
 
              [
                 {
@@ -74,5 +79,5 @@ python manage.py runserver
 
 # Username & Password (Admin)
 
-username : Faqadmin
-password : Admin_9580
+    username : Faqadmin
+    password : Admin_9580
